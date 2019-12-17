@@ -18,10 +18,6 @@ public class Application {
 
         MembershipTester membershipTester = createMembershipTester(args[1]);
         membershipTester.test(no_of_random_items);
-
-//        double initial_free_memory = print_memory_at("START");
-//        double final_free_memory = print_memory_at("END");
-//        System.out.println("Memory utilised: " + (initial_free_memory - final_free_memory) + "MB");
     }
 
     private static MembershipTester createMembershipTester(String membershipTesterType) {
@@ -32,27 +28,5 @@ public class Application {
         if(membershipTesterType.equals(CUCKOO))
             return new CuckooMembershipTester();
         throw new RuntimeException("Unknown type of algorithm");
-    }
-
-    private static double print_memory_at(final String content) {
-        System.out.println("--------------------" + content + "----------------------------");
-        double free_memory = print_jvm_heap_size();
-        System.out.println("--------------------------------------------------------");
-        return free_memory;
-    }
-
-    private static double print_jvm_heap_size() {
-        Runtime rt = Runtime.getRuntime();
-
-        double megs = 1024 * 1024;
-        double totalMem = Math.ceil(rt.totalMemory() / megs);
-        double maxMem = Math.ceil(rt.maxMemory() / megs);
-        double freeMem = Math.ceil(rt.freeMemory() /megs);
-
-        System.out.println ("Total Memory: " + totalMem + " MB");
-        System.out.println ("Max Memory:   " + maxMem   + " MB");
-        System.out.println ("Free Memory:  " + freeMem  + " MB");
-
-        return freeMem;
     }
 }
