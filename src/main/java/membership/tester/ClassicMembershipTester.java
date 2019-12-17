@@ -1,14 +1,12 @@
 package membership.tester;
 
 import membership.MembershipTester;
-import membership.SetMembershipTest;
 import membership.container.ClassicMembershipContainer;
 
-public class ClassicMembershipTester implements MembershipTester {
+public class ClassicMembershipTester extends MembershipTester {
 
     @Override
     public void test(int numberOfItems) {
-        final ClassicMembershipContainer container = new ClassicMembershipContainer(numberOfItems);
-        SetMembershipTest.test(container);
+        runTests(new ClassicMembershipContainer(numberOfItems));
     }
 }
