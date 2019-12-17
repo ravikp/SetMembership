@@ -9,10 +9,10 @@ class BloomContainer implements Container {
     private final BloomFilter<CharSequence> bag;
     private final int count;
 
-    public BloomContainer(int count) {
+    public BloomContainer(int count, double falsePositiveProbability) {
         this.count = count;
         Funnel<CharSequence> funnel = Funnels.stringFunnel();
-        bag = BloomFilter.create(funnel, count, 0.01);
+        bag = BloomFilter.create(funnel, count, falsePositiveProbability);
     }
 
     @Override

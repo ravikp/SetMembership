@@ -12,7 +12,7 @@ public class SetMembershipTest {
     }
 
     public static void testScalableMembership(int no_of_random_items) {
-        final BloomContainer container = new BloomContainer(no_of_random_items);
+        final BloomContainer container = new BloomContainer(no_of_random_items, 10E-6);
         testMembership(container);
     }
 
