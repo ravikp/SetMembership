@@ -1,8 +1,9 @@
 package membership;
 
-class Compliment implements Operator {
+class BooleanIdentity implements Operator {
+
     @Override
     public boolean apply(boolean data) {
-        return !data;
+        return data;
     }
 }

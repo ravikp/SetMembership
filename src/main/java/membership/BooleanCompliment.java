@@ -1,9 +1,8 @@
 package membership;
 
-class Passthrough implements Operator {
-
+class BooleanCompliment implements Operator {
     @Override
     public boolean apply(boolean data) {
-        return data;
+        return !data;
     }
 }

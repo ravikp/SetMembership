@@ -27,8 +27,8 @@ public class SetMembershipTest {
             }
         }
 
-        printSuccessRate("Items in set", container, in_set, new Passthrough());
-        printSuccessRate("Items not in set", container, not_in_set, new Compliment());
+        printSuccessRate("Items in set", container, in_set, new BooleanIdentity());
+        printSuccessRate("Items not in set", container, not_in_set, new BooleanCompliment());
     }
 
     private static void printSuccessRate(String message, Container container, List<String> in_set, Operator operator) {
