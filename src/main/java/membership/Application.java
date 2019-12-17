@@ -1,7 +1,4 @@
-package hello;
-
-import javax.swing.plaf.synth.SynthTextAreaUI;
-import java.util.Objects;
+package membership;
 
 public class Application {
 	
