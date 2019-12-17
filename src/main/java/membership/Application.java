@@ -10,7 +10,7 @@ public class Application {
             System.exit(-1);
         }
 
-        double initial_free_memory = print_memory_at("START");
+//        double initial_free_memory = print_memory_at("START");
         if (args[1].equals("classic"))
             SetMembershipTest.testClassicMembership(no_of_random_items);
         else if (args[1].equals("fast"))
@@ -20,8 +20,8 @@ public class Application {
             System.exit(-1);
         }
 
-        double final_free_memory = print_memory_at("END");
-        System.out.println("Memory utilised: " + (initial_free_memory - final_free_memory) + "MB");
+//        double final_free_memory = print_memory_at("END");
+//        System.out.println("Memory utilised: " + (initial_free_memory - final_free_memory) + "MB");
     }
 
     private static double print_memory_at(final String content) {
