@@ -15,3 +15,5 @@ dependency-reduced-pom.xml
 README.html
 .idea
 *.iml
+setmembership.ipr
+setmembership.iws
