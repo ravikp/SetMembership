@@ -6,17 +6,7 @@ import java.util.UUID;
 
 public class SetMembershipTest {
 
-    public static void testClassicMembership(int no_of_items) {
-        final SetContainer container = new SetContainer(no_of_items);
-        testMembership(container);
-    }
-
-    public static void testScalableMembership(int no_of_random_items) {
-        final BloomContainer container = new BloomContainer(no_of_random_items, 10E-6);
-        testMembership(container);
-    }
-
-    private static void testMembership(Container container) {
+    public static void test(Container container) {
         List<String> in_set = new ArrayList<>();
         List<String> not_in_set = new ArrayList<>();
 

@@ -10,18 +10,29 @@ public class Application {
             System.exit(-1);
         }
 
-//        double initial_free_memory = print_memory_at("START");
-        if (args[1].equals("classic"))
-            SetMembershipTest.testClassicMembership(no_of_random_items);
-        else if (args[1].equals("fast"))
-            SetMembershipTest.testScalableMembership(no_of_random_items);
-        else {
-            System.out.println("Mention the type of algorithm either 'classic' or 'fast' as second parameter");
-            System.exit(-1);
-        }
+        MembershipTester membershipTester = createMembershipTester(args[1]);
+        membershipTester.test(no_of_random_items);
 
+//        if (args[1].equals("classic"))
+//            ClassicMembershipTester.testClassicMembership(no_of_random_items);
+//        else if (args[1].equals("fast"))
+//            SetMembershipTest.testScalableMembership(no_of_random_items);
+//        else {
+//            System.out.println("Mention the type of algorithm either 'classic' or 'fast' as second parameter");
+//            System.exit(-1);
+//        }
+
+//        double initial_free_memory = print_memory_at("START");
 //        double final_free_memory = print_memory_at("END");
 //        System.out.println("Memory utilised: " + (initial_free_memory - final_free_memory) + "MB");
+    }
+
+    private static MembershipTester createMembershipTester(String membershipTesterType) {
+        if (membershipTesterType.equals("classic"))
+            return new ClassicMembershipTester();
+        if (membershipTesterType.equals("fast"))
+            return new BloomMembershipTester();
+        throw new RuntimeException("Unknown type of algorithm");
     }
 
     private static double print_memory_at(final String content) {

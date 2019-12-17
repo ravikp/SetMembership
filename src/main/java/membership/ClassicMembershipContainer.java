@@ -2,12 +2,12 @@ package membership;
 
 import java.util.HashSet;
 
-class SetContainer implements Container {
+class ClassicMembershipContainer implements Container {
 
     private final HashSet<String> bag;
     private int count;
 
-    public SetContainer(int count) {
+    public ClassicMembershipContainer(int count) {
         this.count = count;
         bag = new HashSet<String>();
     }
