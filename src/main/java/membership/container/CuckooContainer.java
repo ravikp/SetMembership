@@ -8,9 +8,11 @@ import java.nio.charset.Charset;
 public class CuckooContainer extends Container {
     private final CuckooFilter<String> filter;
 
-    public CuckooContainer(int numberOfItems) {
+    public CuckooContainer(int numberOfItems, double falsePositiveRate) {
         super(numberOfItems);
-        filter = new CuckooFilter.Builder<String>(Funnels.stringFunnel(Charset.forName("US-ASCII")), count()).build();
+        filter = new CuckooFilter.Builder<String>(Funnels.stringFunnel(Charset.forName("US-ASCII")), count())
+                .withFalsePositiveRate(falsePositiveRate)
+                .build();
     }
 
     @Override
