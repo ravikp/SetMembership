@@ -34,4 +34,8 @@ For anything beyond 50Million, 'java.util.Set' is going out of memory
 
 or
 
-`java -jar -Xms512m -Xmx5g ./build/libs/setmembership-0.1.0.jar 20000000 fast`
+`java -jar -Xms512m -Xmx700m ./build/libs/setmembership-0.1.0.jar 20000000 bloom`
+
+or 
+
+`java -jar -Xms512m -Xmx700m ./build/libs/setmembership-0.1.0.jar 20000000 cuckoo`
