@@ -30,8 +30,8 @@ The source code evaluates the performance of set membership using java set membe
 
 For anything beyond 50Million, 'java.util.Set' is going out of memory
 
-`java -jar -Xms512m -Xmx5g ./build/libs/pds-0.1.0.jar 20000000 classic`
+`java -jar -Xms512m -Xmx5g ./build/libs/setmembership-0.1.0.jar 20000000 classic`
 
 or
 
-`java -jar -Xms512m -Xmx5g ./build/libs/pds-0.1.0.jar 20000000 fast`
+`java -jar -Xms512m -Xmx5g ./build/libs/setmembership-0.1.0.jar 20000000 fast`
