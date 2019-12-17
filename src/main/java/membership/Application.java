@@ -1,8 +1,11 @@
 package membership;
 
 public class Application {
-	
-	public static void main(String[] args) {
+
+    public static final String CLASSIC = "classic";
+    public static final String BLOOM = "bloom";
+
+    public static void main(String[] args) {
 	    int no_of_random_items = Integer.valueOf(args[0]);
 
         if(args.length < 2){
@@ -19,9 +22,9 @@ public class Application {
     }
 
     private static MembershipTester createMembershipTester(String membershipTesterType) {
-        if (membershipTesterType.equals("classic"))
+        if (membershipTesterType.equals(CLASSIC))
             return new ClassicMembershipTester();
-        if (membershipTesterType.equals("fast"))
+        if (membershipTesterType.equals(BLOOM))
             return new BloomMembershipTester();
         throw new RuntimeException("Unknown type of algorithm");
     }
