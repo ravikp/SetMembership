@@ -1,5 +1,7 @@
 package membership;
 
+import membership.tester.*;
+
 public class Application {
 
     public static final String CLASSIC = "classic";

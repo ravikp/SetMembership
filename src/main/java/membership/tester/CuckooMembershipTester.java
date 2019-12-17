@@ -1,4 +1,8 @@
-package membership;
+package membership.tester;
+
+import membership.MembershipTester;
+import membership.SetMembershipTest;
+import membership.container.CuckooContainer;
 
 public class CuckooMembershipTester implements MembershipTester {
     @Override

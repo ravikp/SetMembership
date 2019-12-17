@@ -1,8 +1,8 @@
-package membership;
+package membership.container;
 
 import java.util.HashSet;
 
-class ClassicMembershipContainer extends Container {
+public class ClassicMembershipContainer extends Container {
 
     private final HashSet<String> bag;
 

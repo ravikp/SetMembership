@@ -1,6 +1,6 @@
-package membership;
+package membership.container;
 
-abstract class Container {
+public abstract class Container {
     private int count;
 
     public Container(int count) {

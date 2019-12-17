@@ -1,4 +1,8 @@
-package membership;
+package membership.tester;
+
+import membership.MembershipTester;
+import membership.SetMembershipTest;
+import membership.container.BloomContainer;
 
 public class BloomMembershipTester implements MembershipTester {
 

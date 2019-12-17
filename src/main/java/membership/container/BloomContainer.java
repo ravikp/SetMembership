@@ -1,4 +1,4 @@
-package membership;
+package membership.container;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnel;
@@ -6,7 +6,7 @@ import com.google.common.hash.Funnels;
 
 import java.nio.charset.Charset;
 
-class BloomContainer extends Container {
+public class BloomContainer extends Container {
 
     private final BloomFilter<CharSequence> bag;
 
