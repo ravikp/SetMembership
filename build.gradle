@@ -24,6 +24,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    compile 'com.google.guava:guava:11.0.2'
+    compile 'com.github.mgunlogson:cuckoofilter4j:1.0.2'
 }
 

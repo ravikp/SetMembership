@@ -4,6 +4,7 @@ public class Application {
 
     public static final String CLASSIC = "classic";
     public static final String BLOOM = "bloom";
+    private static final String CUCKOO = "cuckoo";
 
     public static void main(String[] args) {
 	    int no_of_random_items = Integer.valueOf(args[0]);
@@ -26,6 +27,8 @@ public class Application {
             return new ClassicMembershipTester();
         if (membershipTesterType.equals(BLOOM))
             return new BloomMembershipTester();
+        if(membershipTesterType.equals(CUCKOO))
+            return new CuckooMembershipTester();
         throw new RuntimeException("Unknown type of algorithm");
     }
 

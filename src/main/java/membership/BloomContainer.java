@@ -6,15 +6,14 @@ import com.google.common.hash.Funnels;
 
 import java.nio.charset.Charset;
 
-class BloomContainer implements Container {
+class BloomContainer extends Container {
 
     private final BloomFilter<CharSequence> bag;
-    private final int count;
 
-    public BloomContainer(int count, double falsePositiveProbability) {
-        this.count = count;
+    public BloomContainer(int numberOfItems, double falsePositiveProbability) {
+        super(numberOfItems);
         Funnel<CharSequence> funnel = Funnels.stringFunnel(Charset.forName("US-ASCII"));
-        bag = BloomFilter.create(funnel, count, falsePositiveProbability);
+        bag = BloomFilter.create(funnel, numberOfItems, falsePositiveProbability);
     }
 
     @Override
@@ -25,10 +24,5 @@ class BloomContainer implements Container {
     @Override
     public boolean exists(String item) {
         return bag.mightContain(item);
-    }
-
-    @Override
-    public int count() {
-        return count;
     }
 }

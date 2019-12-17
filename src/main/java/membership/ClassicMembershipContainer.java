@@ -2,13 +2,12 @@ package membership;
 
 import java.util.HashSet;
 
-class ClassicMembershipContainer implements Container {
+class ClassicMembershipContainer extends Container {
 
     private final HashSet<String> bag;
-    private int count;
 
     public ClassicMembershipContainer(int count) {
-        this.count = count;
+        super(count);
         bag = new HashSet<String>();
     }
 
@@ -20,10 +19,5 @@ class ClassicMembershipContainer implements Container {
     @Override
     public boolean exists(String item) {
         return bag.contains(item);
-    }
-
-    @Override
-    public int count() {
-        return count;
     }
 }

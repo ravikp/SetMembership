@@ -1,9 +1,15 @@
 package membership;
 
-interface Container {
-    void add(String item);
+abstract class Container {
+    private int count;
 
-    boolean exists(String item);
+    public Container(int count) {
+        this.count = count;
+    }
 
-    int count();
+    public abstract void add(String item);
+    public abstract boolean exists(String item);
+    public int count(){
+        return count;
+    }
 }
