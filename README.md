@@ -28,14 +28,19 @@ The source code evaluates the performance of set membership using java set membe
 
 #### Usage
 
-For anything beyond 50Million, 'java.util.Set' is going out of memory
+To run the application with different filters
 
-`java -jar -Xms512m -Xmx5g ./build/libs/setmembership-0.1.0.jar 20000000 classic`
+`./run.sh 512m 5g 20000000 classic`
 
 or
 
-`java -jar -Xms512m -Xmx700m ./build/libs/setmembership-0.1.0.jar 20000000 bloom`
+`./run.sh 512m 700m 20000000 bloom`
 
 or 
 
-`java -jar -Xms512m -Xmx700m ./build/libs/setmembership-0.1.0.jar 20000000 cuckoo`
+`./run.sh 512m 700m 20000000 cuckoo`
+
+
+To observe the memory usage jconsole 
+
+`./observe.sh`
